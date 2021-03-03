@@ -18,10 +18,41 @@ my notes from the course
 * DAta Center Building
 * Zone (trying to be as much independent as other zone as possible)
 * Region
-* Multi-Region
-* Private-Global-networks (not using internet to communicate between them)
+* Multi-Region (N. America, Europe and Asia)
+* Private-Global-networks (not using internet to communicate between them even they have transoceanic cables )
 * Points of Presence (POPs) Network edges and CDNs locations
-* Global
+* Global 
 
+### Network Ingress & Egress
+Now we can choose from two:
 
+#### Normal Network
+Routes via internet to edge location closets to *destination*
+It's cheaper
 
+#### Google Network
+Routes so traffic enters from internet at edge closest to *source* so as consecuences:
+* Single global IP address can load balance worldwide, so whenever somebody access to the ip they go to the nearest server bringing very fast responses
+* Sidesteps has many issues with DNS
+
+### Pricing
+
+#### Provisioned
+Google make sure you are ready to handle the resource X, it's payed even if not in use at the mmoment
+
+#### Usage
+Google handle whatever I use, and charge me for that
+
+The above two, we are not choosing them, they are inherent to the service we use
+
+#### Network traffic
+* Free on the way in as usual (ingress)
+* Egress payed by GB used (but sometimes if using some Egress to some GCP services are free)
+
+### Security
+* Everything is encrypted at rest
+* Strong Key and Identity Management
+* Network encrypted:  
+  *  All control info is encrypted
+  *  All WAN traffic is encrypted automatically
+  *  And they are starting to ecnrypt even all local traffic within data centers
