@@ -56,3 +56,4 @@ The above two, we are not choosing them, they are inherent to the service we use
   *  All control info is encrypted
   *  All WAN traffic is encrypted automatically
   *  And they are starting to ecnrypt even all local traffic within data centers
+* there is some technogogy from which you can connect securely without using VPN called *BeyondCorp*
