@@ -18,6 +18,9 @@ my notes from the course
 * DAta Center Building
 * Zone (trying to be as much independent as other zone as possible)
 * Region
+* Multi-Region
+* Private-Global-networks (not using internet to communicate between them)
+* Points of Presence (POPs) Network edges and CDNs locations
 
 
 
