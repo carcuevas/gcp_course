@@ -21,6 +21,7 @@ my notes from the course
 * Multi-Region
 * Private-Global-networks (not using internet to communicate between them)
 * Points of Presence (POPs) Network edges and CDNs locations
+* Global
 
 
 
