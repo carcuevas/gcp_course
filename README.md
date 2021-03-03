@@ -57,3 +57,14 @@ The above two, we are not choosing them, they are inherent to the service we use
   *  All WAN traffic is encrypted automatically
   *  And they are starting to ecnrypt even all local traffic within data centers
 * there is some technogogy from which you can connect securely without using VPN called *BeyondCorp*
+
+### Organization
+
+#### Projects
+* Primary unit of organization in GCP, Projects are similar to what **AWS accounts** are
+* Projects own resources
+* Resources can be shared with other projects
+
+
+
+
