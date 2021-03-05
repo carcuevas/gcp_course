@@ -1,3 +1,8 @@
+# Google Compute Engine (GCE)
+
+* This service is not by default activated in a new project one can activate it in console or with `gcloud services enable compute.googleapis.com` or in the APIS section of the console
+
+
 # Google Cloud Storage
 
 ## Buckets
