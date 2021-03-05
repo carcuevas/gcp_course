@@ -2,6 +2,7 @@
 
 ## Buckets
 * Name should be unique across the Cloud Storage
+* Object versioning control cannot be modified from the Console, but just with the command *gsutil*
 
 * We need to take into consideration that to list the buckets inside of a project (Called *Class A Operations*) it's charged by 10.000 operations, if for example we want to list the object of a bucket (called *Class B Operations*) it is also charged by 10.000 operations and depending of the Storage Class 
 
