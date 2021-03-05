@@ -23,6 +23,8 @@ gcloud beta
 ### Syntax
 The syntax is like: `gcloud <global flags> <service/product> <group/area> <command> <flags> <parameters>` 
 
+* check this: https://cloud.google.com/sdk/gcloud/reference/  
+
 #### Global Flags
 
 * *--help, -h* : Display detailed help.
@@ -34,9 +36,48 @@ The syntax is like: `gcloud <global flags> <service/product> <group/area> <comma
 
 
 #### Config properties
-This values are entered just once and then are used by any command that needs them.
+This values are entered just once and then are used by any command that needs them. They are used very often for the *account*, *project*, *region* and *zone* so to configure this it can be used:
 
-* check this: https://cloud.google.com/sdk/gcloud/reference/  
+```
+gcloud config set <CONFIG_PROPERTY> <VALUE>
+```
+
+or to check the value of a property we can do it with:
+
+```
+gcloud config get-value <CONFIG_PROPERTY>
+```
+to unset a property 
+
+```
+gcloud config unset <CONFIG_PROPERTY>
+```
+If we want to configure the common properties in interactive mode just we need to run:
+
+```
+gcloud init
+```
+
+* If we want to list all the configurations:
+
+
+```
+gcloud config configurations list
+```
+
+* Check this https://cloud.google.com/sdk/docs/properties
+
+
+* Also we can create and switch between configurations if we want .....  For create a new configuration we do:
+
+```
+gcloud config configurations create ITS_NAME
+```
+and to switch to that configuration 
+
+```
+gcloud config configurations activate ITS_NAME
+```
 
 ### Basic stuff
 
