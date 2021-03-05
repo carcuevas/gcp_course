@@ -33,6 +33,23 @@ gs://carlinhos_bucket/test_folder/
 gs://carlinhos_bucket/test_folder/Admin.png
 
 ```
+### Playing with labels from/in a bucket
+
+The labels are in JSON format, for example we can get the labels from a bucket with:
+
+```
+gsutil label get gs://carlinhos_bucket > /tmp/labels.json
+```
+
+And we can set the labels of a bucket with:
+
+```
+gsutil label set /tmp/labels.json gs://carlinhos_bucket2
+```
+
+
+* as a response we get in JSON with the list of labels
+
 
 ### Create a bucket
 
