@@ -48,8 +48,6 @@ gsutil label set /tmp/labels.json gs://carlinhos_bucket2
 ```
 
 
-* as a response we get in JSON with the list of labels
-
 
 ### Create a bucket
 
