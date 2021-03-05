@@ -70,6 +70,38 @@ Creating gs://carlinhos_bucket2/...
 ```
 
 
+### Playing with versioning in a bucket
+
+* To show the versioning of a bucket
+
+```
+gsutil versioning get gs://carlinhos_bucket2
+
+```
+
+* To enable versioning of a bucket:
+
+```
+gsutil versioning set on gs://carlinhos_bucket2
+
+```
+
+* To show a file with the versioning data
+
+```
+gsutil ls -a gs://carlinhos_bucket2
+
+```
+
+
+
+### Copying a file to a bucket
+
+```
+gsutil cp file gs://carlinhos_bucket2
+```
+
+
 
 ## gcloud
 
