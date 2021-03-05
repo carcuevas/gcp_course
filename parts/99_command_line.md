@@ -41,12 +41,17 @@ The labels are in JSON format, for example we can get the labels from a bucket w
 gsutil label get gs://carlinhos_bucket > /tmp/labels.json
 ```
 
-And we can set the labels of a bucket with:
+* And we can set the labels of a bucket with:
 
 ```
 gsutil label set /tmp/labels.json gs://carlinhos_bucket2
 ```
+* And we can add for example one more label in a bucket like:
 
+```
+gsutil label ch -l "owner:carlinhos" gs://carlinhos_bucket2
+
+```
 
 
 ### Create a bucket
