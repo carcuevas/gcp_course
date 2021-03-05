@@ -95,11 +95,32 @@ gsutil ls -a gs://carlinhos_bucket2
 
 
 
-### Copying a file to a bucket
+### Operations with files and object bucket
 
+* Copy a file to a bucket
 ```
 gsutil cp file gs://carlinhos_bucket2
 ```
+
+* Copy all the objects from a bucket to another bucket **NOT CREATING FOLDERS IN DESTINATION!!**
+
+```
+gsutil cp file gs://carlinhos_bucket/** gs://carlinhos_bucket2/
+```
+
+
+* Remove a file in a bucket
+
+```
+gsutil rm gs://carlinhos_bucket2/file
+```
+
+* Remove a file in a bucket
+
+```
+gsutil rm gs://carlinhos_bucket2/file
+```
+
 
 
 
