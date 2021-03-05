@@ -124,11 +124,30 @@ gcloud services enable compute.googleapis.com
  gcloud compute instances list
 
 ```
+#### Show different options for machines:
+
+* Show different type of machines of the type f1 and in us-east1
+
+```
+gcloud compute machine-types list --filter="NAME:f1 AND ZONE~us-east1"
+```
+
 
 #### Create a VM
 
 ```
 gcloud compute instances create myvm_name
+```
+
+* We can speficy more options so we are not taking by default many options
+
+```
+## First we set zone and region
+gcloud config set compute/region us-east1
+gcloud config set compute/zone us-east1-b
+# We create the machine and specify the type
+gcloud compute instances create --machine-type=f1-micro myhappyvm
+
 ```
 
 #### Remove a VM
@@ -137,7 +156,12 @@ gcloud compute instances create myvm_name
 gcloud compute instances delete myvm_name
 ```
 
+#### Connect to a VM via SSH
+* we won't need our keys in the server
 
+```
+gcloud compute ssh VM_NAME
+```
 
 
 
