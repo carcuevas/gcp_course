@@ -34,6 +34,22 @@ gs://carlinhos_bucket/test_folder/Admin.png
 
 ```
 
+### Create a bucket
+
+so for specifying all the options we can check the help
+
+```
+gsutil mb --help
+```
+
+for example we can create one like this:
+
+```
+gsutil mb -l us-east1 gs://carlinhos_bucket2
+Creating gs://carlinhos_bucket2/...
+```
+
+
 
 ## gcloud
 
