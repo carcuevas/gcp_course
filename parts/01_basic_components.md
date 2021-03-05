@@ -17,3 +17,11 @@ We can have:
 * **Nearline**: For backups, when retrieving data once a month, cheaper. So the minimum time of archiving without paying penalty is 30 days.
 * **Coldline**: Best for disaster recovery, or for retrieving data once a trimester. A bit cheaper than Nearline by GB stored. But the minimum time of archiving without paying penalty is 90 days.
 * **Archive**: Long time digital preservation, accessed less than once a year. The cheapest one by GB, but take care with the *Class A* and *Class B* operations are quite expensive. The minimum time of archiving without paying penalty is 365 days
+
+### Access control to bucket objects
+* **Fine-grained**: One can specify what ACL to apply to the objects inside the Bucket, this was the one before... 
+* **Uniform**: uniform access to all objects in the bucket by using only bucket-level permissions, so we cannot make one object private for example if we want the rest of object public...
+
+When upload files, by default are PRIVATE, if we want to get a public object called *object1* in the bucket *test_bucket* we could retrieve it by going to:
+
+**https://storage.googleapis.com/test_bucket/object1**
