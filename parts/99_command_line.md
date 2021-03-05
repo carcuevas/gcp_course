@@ -140,4 +140,48 @@ or also in
 gcloud config list
 ```
 
+### Services stuff
+
+#### List services
+
+* list all services **FOR THE SPECIFIC PROJECT** 
+```
+gcloud services list --available
+```
+
+* list all enabled services **FOR THE SPECIFIC PROJECT** 
+```
+gcloud services list --enabled
+```
+
+#### Enable services
+
+* For example compute service
+
+```
+gcloud services enable compute.googleapis.com
+```
+
+
+### Computing Stuff 
+
+#### Listing Compute instances we have in the current project
+
+```
+ gcloud compute instances list
+
+```
+
+#### Create a VM
+
+```
+gcloud compute instances create myvm_name
+```
+
+#### Remove a VM
+
+```
+gcloud compute instances delete myvm_name
+```
+
 
