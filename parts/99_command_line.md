@@ -1,6 +1,109 @@
+
+
+## gcloud
+
+It's a command line tool to interact with GCP, in general is more powerful than the console, but less that the Rest API
+
+
+
+
+Also it's very simple to use new functionalities versions (still not well tested ) in the gcloud just with this:
+
+```
+gcloud alpha
+```
+and
+
+```
+gcloud beta
+```
+
+
+
+### Syntax
+The syntax is like: `gcloud <global flags> <service/product> <group/area> <command> <flags> <parameters>` 
+
+#### Global Flags
+
+* *--help, -h* : Display detailed help.
+* *--project PROJECT_ID*: select some project
+* *--account ACCOUNT*: user account to use for invocation. 
+* *--filter*: Sometimes it's not available but when it is, we can cut the information shown (sometimes better than `grep`)
+* *--format*: Oput format: *json*, *text*, *csv*, *yaml* and more
+* *--quiet, -q*: **Dangerous** With this it wont ask for confirmation in destructive actions, will be using default values
+
+
+#### Config properties
+This values are entered just once and then are used by any command that needs them.
+
+* check this: https://cloud.google.com/sdk/gcloud/reference/  
+
+### Basic stuff
+
+#### Project based operations
+##### Show in which project id we are:
+
+```
+gcloud config get-value project
+```
+
+or also in 
+```
+gcloud config list
+```
+
+### Services stuff
+
+#### List services
+
+* list all services **FOR THE SPECIFIC PROJECT** 
+```
+gcloud services list --available
+```
+
+* list all enabled services **FOR THE SPECIFIC PROJECT** 
+```
+gcloud services list --enabled
+```
+
+#### Enable services
+
+* For example compute service
+
+```
+gcloud services enable compute.googleapis.com
+```
+
+
+### Computing Stuff 
+
+#### Listing Compute instances we have in the current project
+
+```
+ gcloud compute instances list
+
+```
+
+#### Create a VM
+
+```
+gcloud compute instances create myvm_name
+```
+
+#### Remove a VM
+
+```
+gcloud compute instances delete myvm_name
+```
+
+
+
+
+
+
 ## gsutil
 
-It is used to connect to google cloud storage
+It is used to connect to google cloud storage, it's like to use `gcloud storage`
 
 ### show buckets in the project we are
 
@@ -122,66 +225,7 @@ gsutil rm gs://carlinhos_bucket2/file
 ```
 
 
+## bq
 
-
-## gcloud
-
-### Basic stuff
-
-#### Project based operations
-##### Show in which project id we are:
-
-```
-gcloud config get-value project
-```
-
-or also in 
-```
-gcloud config list
-```
-
-### Services stuff
-
-#### List services
-
-* list all services **FOR THE SPECIFIC PROJECT** 
-```
-gcloud services list --available
-```
-
-* list all enabled services **FOR THE SPECIFIC PROJECT** 
-```
-gcloud services list --enabled
-```
-
-#### Enable services
-
-* For example compute service
-
-```
-gcloud services enable compute.googleapis.com
-```
-
-
-### Computing Stuff 
-
-#### Listing Compute instances we have in the current project
-
-```
- gcloud compute instances list
-
-```
-
-#### Create a VM
-
-```
-gcloud compute instances create myvm_name
-```
-
-#### Remove a VM
-
-```
-gcloud compute instances delete myvm_name
-```
-
+It's command line for BigQuery, like writting `gcloud bigquery`
 
