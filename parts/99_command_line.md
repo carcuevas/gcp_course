@@ -132,6 +132,12 @@ gsutil rm gs://carlinhos_bucket2/file
 ##### Show in which project id we are:
 
 ```
+gcloud config get-value project
+```
+
+or also in 
+```
 gcloud config list
 ```
+
 
