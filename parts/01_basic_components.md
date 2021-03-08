@@ -2,6 +2,8 @@
 
 * This service is not by default activated in a new project one can activate it in console or with `gcloud services enable compute.googleapis.com` or in the APIS section of the console
 
+Google Compute engine is passing many things via MEtadata, this metadata we can check with `curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/` in among the information is passing ssh key and so
+
 
 # Google Cloud Storage
 
