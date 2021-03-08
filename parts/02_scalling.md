@@ -14,6 +14,8 @@
 
 * **Unmanaged**: When we want to have not identical instances, and we can add or remove instances arbitrarily managed by ourselves. It cannot be *multi-zone*, but supports *load-balancing*.
 
+** When deleting a `Managed group` it will **delete** all of the instances in the group, but deleting an `Unmmanaged group` it will NOT delete the instances created
+
 #### Autohealing
 
 Allows to recreate VM instances when needed, so we can have some *Health Check* to recreate machines in case it's not 
