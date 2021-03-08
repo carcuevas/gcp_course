@@ -6,6 +6,8 @@ Google Compute engine is passing many things via MEtadata, this metadata we can 
 
 * Once we create a VM, we cannot change its name, nor the *Zone*
 * We can add *additional disks* but it is better not to use with autoscalling since it's not behaving very well
+* We can select even to run a container inside the machine directly.
+* When we connect to a created VM using the SSH from the Web Console, it will create some temporary SSH keys which will expired after a few minutes so we can connect to the created VM.
 
 ## VM types
 
@@ -14,9 +16,6 @@ When selecting VM types, we have to take into consideration that the *High memor
 
 We can customize as we want the amount CPU and Memory we want (of course inside the limits of the machine types), we can select the type of CPU even to add a GPU and so... 
 
-
-* We can select even to run a container inside the machine directly.
-* 
 
 
 ## Settings 
@@ -31,15 +30,33 @@ Here we can for example configure the *SSH Keys* which will be used for a *Proje
 
 We can allow from the VM if we want to have access to some or all  of the `Cloud APIs` in the Project directly from a new VM, so from the server we can access those services we want to.
 
-### VM Options
+## VM Options
+
+### Disks
+* We can select here if we want to delete the boot disk when the instance is deleted
+* **Encryption**: It normally better to let Google Manage the encryption keys, also we can use specific *Customer-managed key* which is inside the Cloud Key Management Service, or even to use a *Customer-supplied key* outside of Google, latest one is not recommended though
+
+### Management
+
+#### Automation
+
+* **Startup scripts**: This will run, when starting the machine for first time **and** on a **reboot**
+* **Metadata**: We can set custom metadata 
 
 #### Availability Policy
 
-* **Preemptibility**: if selected as *ON* Google just assures that it will run for 24h, but after that it's something happens with the Rack, server or something this machine will be stopped and not migrated; that it is why it's cheaper.
+* **Preemptibility**: if selected as *ON* Google just assures that it will run for a maximum of a 24h (or even before in case something happens), but after that it's something happens with the Rack, server or something this machine will be stopped and not migrated; that it is why it's cheaper.
 
 * **Automatic Restart**: When Preemptibility is *OFF* Google will try to have the machine running, so if there is some problem with the Server/Rack Google will automatically restart the instance in another Server/Rack so the machine will be active.
 
 * **On host maintenance**: When Preemptibility is *OFF* and Google needs to do some maintenance in the infrastructure where the VM is, it will automatically migrate the machine to other infrastructure **without downtime** 
+
+
+### Security
+
+Here we can override the project common settings for SSH Keys, we can block them and use a custom ones for some instance. We can use this when we do not want to allow to specific people on a project to have access to a certain machine for example.
+
+
 
 
 
