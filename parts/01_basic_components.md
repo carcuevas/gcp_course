@@ -2,7 +2,46 @@
 
 * This service is not by default activated in a new project one can activate it in console or with `gcloud services enable compute.googleapis.com` or in the APIS section of the console
 
-Google Compute engine is passing many things via MEtadata, this metadata we can check with `curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/` in among the information is passing ssh key and so
+Google Compute engine is passing many things via MEtadata, this metadata we can check with `curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/` in among the information is passing ssh key and so.
+
+* Once we create a VM, we cannot change its name, nor the *Zone*
+* We can add *additional disks* but it is better not to use with autoscalling since it's not behaving very well
+
+## VM types
+
+When selecting VM types, we have to take into consideration that the *High memory* machines have the maximum amount of memory available for a giving number of CPU Cores, and the *High Cpu* type would be the opposite, so the maximum amount of Cores for a giving amount of Memory.
+
+
+We can customize as we want the amount CPU and Memory we want (of course inside the limits of the machine types), we can select the type of CPU even to add a GPU and so... 
+
+
+* We can select even to run a container inside the machine directly.
+* 
+
+
+## Settings 
+
+We can select a *default region* and *default zone* 
+
+## Metadata
+
+Here we can for example configure the *SSH Keys* which will be used for a *Project*
+
+## Identity and API access
+
+We can allow from the VM if we want to have access to some or all  of the `Cloud APIs` in the Project directly from a new VM, so from the server we can access those services we want to.
+
+### VM Options
+
+#### Availability Policy
+
+* **Preemptibility**: if selected as *ON* Google just assures that it will run for 24h, but after that it's something happens with the Rack, server or something this machine will be stopped and not migrated; that it is why it's cheaper.
+
+* **Automatic Restart**: When Preemptibility is *OFF* Google will try to have the machine running, so if there is some problem with the Server/Rack Google will automatically restart the instance in another Server/Rack so the machine will be active.
+
+* **On host maintenance**: When Preemptibility is *OFF* and Google needs to do some maintenance in the infrastructure where the VM is, it will automatically migrate the machine to other infrastructure **without downtime** 
+
+
 
 
 # Google Cloud Storage
