@@ -119,5 +119,11 @@
   * The resource is **PUBLIC** so **Be careful!!** 
   
 
-
 ### Groups
+
+* It is a named collections of Google Accounts and *Service Accounts*
+* Every group has an unique email addresss associated with the group
+* So membership in a *Group* can grants capabilities to Users and *Service Accounts*
+* **It is recommende to use them for everything**
+* Can be used for owner when within an *Organization*
+* Can nest *Groups* in an *Organization*
