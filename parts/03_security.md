@@ -69,7 +69,7 @@
 * The permissions always follows the pattern `Service.Resource.Verb` as for example `pubsub.topics.publics`
 * Usually each of the permissions corrresponds to REST API methods
 
-### Roles
+### Role
 * It is a collection of permissions to use or manage GCP resources
 
 #### Primitive Roles
@@ -86,5 +86,31 @@
 * It can be *Project* or *Organization* level collection we define of granular permissions
   
   
+### Members
+
+* It is some Google-known identity
+* Each member is identified by an unique email address
+
+#### Types of members: 
+
+* **User**:
+  * It's an specific Google account like *G Suite*, *Cloud Identity*, *Gmail* or some validated email
+  * It's for people 
+
+* **Service Account**:
+  * It's used for Applications and Services
+
+* **Group**:
+  * It's a collection of *Users* and/or *Service Accounts*
+  * Managed by *Google Group* 
+
+* **Domain**:
+  * Actually it's the whole domain
+  * Managed by *G Suite* or *Google Identity* 
+ 
+* **allAuthenticatedUsers**:
+  * When using any Google account or Service account
+  * Basically it is saying that the resource is **PUBLIC** so **Be careful!!** 
 
 
+### Groups
