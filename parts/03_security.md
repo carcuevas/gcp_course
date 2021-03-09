@@ -174,6 +174,7 @@ https://cloud.google.com/iam/docs/using-iam-securely
 ### Billing Account Administrator
 * **Purpose**: To Manage one *Billing Account* (Not to create them)
 * **Level**: It is *Billing Account* level
+* * **Use Case**: For example for setting  *Budget Alerts* it is needed 
 
 ### Billing Account Viewer
 * **Purpose**: To view billing account cost information and transactions
