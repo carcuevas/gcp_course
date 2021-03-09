@@ -34,6 +34,8 @@
 
 ## Accounting Products (accountability)
 *Google Cloud Logging* to audit and to store Activity Logs
+
 *Billing Export* to go to *BigQuery* or to file in GCS
+
 *GCS Object Lifecycle Management* so we can get rid of sensitive data which is not needed anymore for example
 
