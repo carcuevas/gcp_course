@@ -78,8 +78,12 @@
   * **Editor**: it can view and change things but cannot change  *Access* to *Billing*
   * **Owner**: It is like editor but also controls *Access* and *Billing*
 
-#### Primitive Roles
+#### Predefined Roles
 * Gives granular access to specific GCP resources
+* A list here: https://cloud.google.com/iam/docs/understanding-roles#predefined_roles
+
+#### Custom Roles
+* It can be *Project* or *Organization* level collection we define of granular permissions
   
   
 
