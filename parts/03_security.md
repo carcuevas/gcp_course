@@ -39,3 +39,28 @@
 
 *GCS Object Lifecycle Management* so we can get rid of sensitive data which is not needed anymore for example
 
+# IAM
+
+## Breakdown of IAM
+* Authorization of GCP
+
+## Resources Hierarchy
+
+### Resource
+* It is just something you create it in GCP
+
+### Project
+* Container we use for a set of some related resources
+* Also it define a trust boundary, by default we can access resources within one *Project* but we cannot access to resources in other *Projects*
+* Different projects of course can different resources
+
+### Folder
+* Contains any number of *Projects* and/or *Folders* itself
+
+### Organization
+* Top level Hierarchy
+* Tied to *G Suite* or *Cloud Identity Domain*
+
+
+## Permissions and Roles
+
