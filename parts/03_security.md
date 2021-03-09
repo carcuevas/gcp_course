@@ -103,6 +103,7 @@
 * **Group**:
   * It's a collection of *Users* and/or *Service Accounts*
   * Managed by *Google Group* 
+  * It should be the default for us to be used
 
 * **Domain**:
   * Actually it's the whole domain
@@ -110,7 +111,13 @@
  
 * **allAuthenticatedUsers**:
   * When using any Google account or Service account
-  * Basically it is saying that the resource is **PUBLIC** so **Be careful!!** 
+  * Basically it is saying that the resource is **PUBLIC** every body can open a Google account so **Be careful!!** 
+  * Since it's inside Google we can tie actions back to the user
+
+* **allUsers**:  
+  * Anyone on the internet 
+  * The resource is **PUBLIC** so **Be careful!!** 
+  
 
 
 ### Groups
