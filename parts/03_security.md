@@ -179,3 +179,7 @@ https://cloud.google.com/iam/docs/using-iam-securely
 * **Purpose**: To view billing account cost information and transactions
 * **Level**: It is *Billing Account* level
 
+### Project Billing Manager
+* **Purpose**: Link/Unlink the project to/from a *Billing account*
+* **Level**: It is *Project* level
+
