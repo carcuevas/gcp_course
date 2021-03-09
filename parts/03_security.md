@@ -64,3 +64,23 @@
 
 ## Permissions and Roles
 
+### Permission
+* Allows to perform a certain action
+* The permissions always follows the pattern `Service.Resource.Verb` as for example `pubsub.topics.publics`
+* Usually each of the permissions corrresponds to REST API methods
+
+### Roles
+* It is a collection of permissions to use or manage GCP resources
+
+#### Primitive Roles
+* These are *Project* level and often too broad:
+  * **Viewer**: Just read-only, cannot change anything
+  * **Editor**: it can view and change things but cannot change  *Access* to *Billing*
+  * **Owner**: It is like editor but also controls *Access* and *Billing*
+
+#### Primitive Roles
+* Gives granular access to specific GCP resources
+  
+  
+
+
