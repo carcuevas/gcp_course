@@ -41,6 +41,11 @@
 
 # IAM
 
+https://cloud.google.com/iam/docs/overview
+https://cloud.google.com/iam/docs/faq
+https://cloud.google.com/iam/docs/using-iam-securely
+
+
 ## Breakdown of IAM
 * Authorization of GCP
 
@@ -142,3 +147,22 @@
 * There is a maximum limit of 1500 bindings per *Policy* but we should not used many ... **We should be using *Groups***
 * When attaching a policy to a resource it usually takes **less than 60s to grant/revoke** (in documentation it said it can takes up to 7minutes)
 * When using `gcloud` for changing bindings in *Policies* do not use `set-iam-policy` it is better to use `add-iam-policy-binding` or `remove-iam-policy-binding` https://cloud.google.com/sdk/gcloud/reference/projects/add-iam-policy-binding as example at *Project* level
+
+
+
+# Billing Access Control
+
+* Represent to way to pay for GCP service usage
+* It is some kind of special *Resource* that lives outside the *Projects*
+* Belongs to an *Organization* and this has consequences:
+  * Inherits Org-level IAM policies (so an owner in Organization level will be owner in Billing)
+* The *Billing* account can be linked to *Projects* but the *Projects* are **NOT** owning them
+* We can have if we want multiple *Billing* accounts
+* A *Project* can have just **ONE** link to a *Billing* account.
+
+## Roles link to Billing
+
+### Billing Account User
+* **Purpose**: The purpose of this role is to link *Projects* to *Billing Accounts*
+* **Level**: It is *Organization* level or *Billing Account*, the later one will just allow to link *Projects* to exactly that *Billing Account*
+* **Use Case**: It has very restricted permissions, and normally this *Billing Account User* role is used with *Project Creator*, so allow to some user to create some *Project*
