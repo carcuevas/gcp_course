@@ -163,12 +163,39 @@ gcloud compute instances delete myvm_name
 gcloud compute ssh VM_NAME
 ```
 
+### IAM stuff
+
+#### Manage Policy Bindings
+
+* One could add or revoke a binding in a policy using:
+
+``` 
+gcloud [GROUP] get-iam-policy
+```
+get the policy in YAML/JSOIN edit it and then execute 
+
+
+``` 
+gcloud [GROUP] set-iam-policy
+```
+but this is not that good, and we can use something different which is giving less work and it's less error-prone. **Better to use**:
+
+* For adding a new Binding
+```
+gcloud [GROUP] add-iam-policy-binding [RESOURCE-NAME] --role [ROLE_TO_GRANT] --member user:[USER-EMAIL]
+```
+
+* For removing a Binding
+```
+gcloud [GROUP] remove-iam-policy-binding [RESOURCE-NAME] --role [ROLE_TO_REVOKE] --member user:[USER-EMAIL]
+```
+
 
 
 
 ## gsutil
 
-It is used to connect to google cloud storage, it's like to use `gcloud storage`
+It is used to connect to google cloud storage, it would be like to use `gcloud storage` (which does not exist anymore if ever :D)
 
 ### show buckets in the project we are
 
