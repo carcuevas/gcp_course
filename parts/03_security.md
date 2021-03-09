@@ -85,7 +85,8 @@
 #### Custom Roles
 * It can be *Project* or *Organization* level collection we define of granular permissions
   
-  
+## Members and Groups
+
 ### Members
 
 * It is some Google-known identity
@@ -127,3 +128,14 @@
 * **It is recommende to use them for everything**
 * Can be used for owner when within an *Organization*
 * Can nest *Groups* in an *Organization*
+
+## Policies
+
+### Breakdown of Policies
+
+* A *Policy* binds *Members* to *Roles* for some scope of *Resources*
+* Basically, it answers *Who can do what to which thing?*
+* This is attached to some level in the Resource Hierarchy: *Organization*, *Folder*, *Project* or even a *Resource* inside a *Project*
+* There are always *additive* mneaning only using  **ALLOW** it cannot be substractive (it is not possible to use a deny)
+  * **Child Policies cannot restrict access granted at a higher level** That's why always good to use *Folders*.
+* Only **Only *Policy* per *Resource** it's allowed
