@@ -166,3 +166,16 @@ https://cloud.google.com/iam/docs/using-iam-securely
 * **Purpose**: The purpose of this role is to link *Projects* to *Billing Accounts*
 * **Level**: It is *Organization* level or *Billing Account*, the later one will just allow to link *Projects* to exactly that *Billing Account*
 * **Use Case**: It has very restricted permissions, and normally this *Billing Account User* role is used with *Project Creator*, so allow to some user to create some *Project*
+
+### Billing Account Creator
+* **Purpose**: To create new self-serve *Billing Accounts*
+* **Level**: It is *Organization* level
+
+### Billing Account Administrator
+* **Purpose**: To Manage one *Billing Account* (Not to create them)
+* **Level**: It is *Billing Account* level
+
+### Billing Account Viewer
+* **Purpose**: To view billing account cost information and transactions
+* **Level**: It is *Billing Account* level
+
