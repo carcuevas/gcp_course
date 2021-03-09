@@ -139,3 +139,6 @@
 * There are always *additive* mneaning only using  **ALLOW** it cannot be substractive (it is not possible to use a deny)
   * **Child Policies cannot restrict access granted at a higher level** That's why always good to use *Folders*.
 * Only **Only *Policy* per *Resource*** it's allowed
+* There is a maximum limit of 1500 bindings per *Policy* but we should not used many ... **We should be using *Groups***
+* When attaching a policy to a resource it usually takes **less than 60s to grant/revoke** (in documentation it said it can takes up to 7minutes)
+* When using `gcloud` for changing bindings in *Policies* do not use `set-iam-policy` it is better to use `add-iam-policy-binding` or `remove-iam-policy-binding`
