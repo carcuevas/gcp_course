@@ -15,14 +15,23 @@
 
 
 ### Routing to the right resource (Load Balancing)
+
 This is important because of: 
 * Latency reduction (servers physically close to clients)
+  * This is something we can get using Premium Tier Routing and *Cross-Region Load Balancing* with *Global Anycast IP*
 
 * Load Balancing
   * Separate from auto-scaling
+  * We get this using *Cloud Load Balancer*, having different types *Internal* or *External* and *Layer 4 Load Balancer* or *Layer 7 Load Balancer*
 
 * System design
- 
+  *  Different servers may handle differents parts of the systems
+  *  Especially when using microservices
+  *  We get this using *HTTP(S) Load Balancer* with *URL MAP* so different *Paths* can go to different places. This is the most powerful one.
+
+https://cloud.google.com/load-balancing/docs/load-balancing-overview
+
+
  
 
 
