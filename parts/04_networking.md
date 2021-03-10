@@ -6,12 +6,18 @@
 * We are calling it Routing because this is about Networking in general it is about the **Data Flow** perspective, it is how each peace of data is going from place to place.
 * So routing in the sense: *Where data should go next?*
 
+### Unicast vs Anycast
+These two are routing schemes which brings how data can go from one place to another.
+* **Unicast**: says that there is just one unique device in the World that can handle the data, and it should be sent there.
+* **Anycast**: says that there are multiple devices that can handle the data, so better to send it to the closest.
+
 
 ### Routing to Google's Network (Premium Routing Tier)
 
 * Google claims, that the routing of data is done mostly in Google's network that's why they have control and it is faster.
 * Total exposure of the data in internet is much smaller
 * In the *Standard Routing* they suppose to know where the data have to go before going inside the Google network.  So if we have a web in California, the user has to route the data all the way to California where then get to the webserver. But when using *Premium Routing* when the request goes to the Google Point of Presence, they can decide what location is best to send it, or even if another place may be better. One can have different copies in different places.
+* Using Global *anycast IP*
 
 
 ### Routing to the right resource (Load Balancing)
@@ -30,6 +36,11 @@ This is important because of:
   *  We get this using *HTTP(S) Load Balancer* with *URL MAP* so different *Paths* can go to different places. This is the most powerful one.
 
 https://cloud.google.com/load-balancing/docs/load-balancing-overview
+
+
+
+### VPC  Routing Among Resources
+
 
 
  
