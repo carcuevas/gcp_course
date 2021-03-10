@@ -41,7 +41,7 @@ https://cloud.google.com/load-balancing/docs/load-balancing-overview
 
 ## VPC  Routing Among Resources
 
-* The *VPC* itself is Global 
+* The *VPC* itself is **Global** and it does **not cost anything** even if lying around...
 * The *Subnets* on inside the *VPC* are **not** Golbal but Regional, but all of the *Subnets* can reach all others(without VPN)
 * *Routes* inside the *VPC* are also Global, and define the next hop for traffic based on destination IP
   *  Routes are global aind apply by Instance-level *Tags* not by *Subnet* (I think this is different from AWS), we can configure the *Tags* in certain *Resouorces*
