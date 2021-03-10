@@ -1,3 +1,4 @@
+![Screenshot_20210310_183951](https://user-images.githubusercontent.com/9727843/110672585-14f95f80-81d0-11eb-96ee-c0b74bdf513c.png)
 ## Routing
 
 * This is useful :D https://www.webopedia.com/reference/osi-layers/
@@ -94,6 +95,7 @@ There are: **Regional** (default) and **Global**, With **Global routing** you ju
 
 * When creating a *Firewall* Rule, better to have in the name the following suffix `-fwr` so we can identify it very easily
 
+
 #### Selecting Targets
 
 * **All instances in the network**: So if we want to use the rule in all the instances in the whole VPC.
@@ -108,3 +110,13 @@ There are: **Regional** (default) and **Global**, With **Global routing** you ju
 
 #### Protocol and Ports
 * We can select the Ports we want, or protocol names as: *ssh*, *icmp* etc... 
+
+** Check the example in the attachment bellow, we have a frontend(fe) and a backend (be):
+  * FE and BE are open to ssh using the *Tag* `open-ssh-tag` 
+  * From everywhere (Except BE) the FE can be pinged
+  * FE can do ping (ICMP) to BE,FE,Google (using Region us-west1 and cidr 172.16.0.0/24)
+  * Only FE can PING a BE machine
+  * BE can do just ping (ICMP) to another BE and nothing else (using Region us-central1 and cidr 172.16.1.0/24)
+
+
+![Screenshot_20210310_183951](https://user-images.githubusercontent.com/9727843/110672668-2e021080-81d0-11eb-8a00-c99ded4b929f.png)
