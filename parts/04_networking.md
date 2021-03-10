@@ -51,11 +51,15 @@ https://cloud.google.com/load-balancing/docs/load-balancing-overview
    * All *Firewall* Rules are apply Instance-level *Tags* or Service Account 
    * Default *Firewall* Rules block all inboud traffic and allow all the the oubound data. Of course that we can change
 
+
+
 ### VPC Creation
 
 * When a *Project* is created there is a default *VPC* created.
 
-#### Subnet Creation Mode
+#### Subnets 
+
+##### Creation Mode
 * **Automatic**: it will create one subnet in each region, _using always the same CIDRs_
   * If a new Region or Zone is included a new *Subnet* it will be included automatically
 
@@ -63,7 +67,9 @@ https://cloud.google.com/load-balancing/docs/load-balancing-overview
 
 * When creating a new *VPC* if we use **Automatic** `Subnet  Creation Mode` it will create one subnet in each region, _using always the same CIDRs_
 
-
+##### Some notes
+* We can edit a *Subnet* and increase its CIDR range **without** recreating it
+* The new range has to be bigger than the old one, and contain the existing one
 
 #### Firewall Rules in Automatic Subnet Creation VPC
 
@@ -121,3 +127,15 @@ There are: **Regional** (default) and **Global**, With **Global routing** you ju
 
 
 ![Screenshot_20210310_183951](https://user-images.githubusercontent.com/9727843/110672668-2e021080-81d0-11eb-8a00-c99ded4b929f.png)
+
+
+### Shared VPC
+
+In an *Organization* we can share VPCs among multiple *Projects* so we have:
+
+* **Host Project**: One *Project* owns the *Shared VPC*
+* **Service Projects**: Other *Projects* granted access to use all/part of the *Shared VPC*
+
+With this, multiple *Projects* coexist on the same local network and as advantage, a centralized team can manage the network security.
+
+
