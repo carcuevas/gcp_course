@@ -138,4 +138,4 @@ In an *Organization* we can share VPCs among multiple *Projects* so we have:
 
 With this, multiple *Projects* coexist on the same local network and as advantage, a centralized team can manage the network security.
 
-
+https://cloud.google.com/vpc/docs/shared-vpc
