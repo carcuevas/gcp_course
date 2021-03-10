@@ -108,13 +108,3 @@ There are: **Regional** (default) and **Global**, With **Global routing** you ju
 
 #### Protocol and Ports
 * We can select the Ports we want, or protocol names as: *ssh*, *icmp* etc... 
-
-
-
-
-
-Roles:
-`Logs Writer` and `Monitoring Metric Writer`
-
-
-
