@@ -39,7 +39,7 @@ https://cloud.google.com/load-balancing/docs/load-balancing-overview
 
 
 
-### VPC  Routing Among Resources
+## VPC  Routing Among Resources
 
 * The *VPC* itself is Global 
 * The *Subnets* on inside the *VPC* are **not** Golbal but Regional, but all of the *Subnets* can reach all others(without VPN)
@@ -50,10 +50,29 @@ https://cloud.google.com/load-balancing/docs/load-balancing-overview
    * All *Firewall* Rules are apply Instance-level *Tags* or Service Account 
    * Default *Firewall* Rules block all inboud traffic and allow all the the oubound data. Of course that we can change
 
+### VPC Creation
+
+#### Subnet Creation Mode
+* **Automatic**: it will create one subnet in each region, _using always the same CIDRs_
+  * If a new Region or Zone is included a new *Subnet* it will be included automatically
+
+* **Custom**: We will need to create our *Subnets* with their CIDRs.
+
+* When creating a new *VPC* if we use **Automatic** `Subnet  Creation Mode` it will create one subnet in each region, _using always the same CIDRs_
 
 
  
 
+#### Firewall Rules
+
+* Also we start a new *VPC* with some 4 default  Firewall rules, which we can modify.
+  1. *[my-vpc-name]-allow-all-icmp* (so we can allow ping/traceroute and so)
+  2. *[my-vpc-name]-allow-internal* (allowing internal traffic to be accepted inside the *VPC*)
+  3. *[my-vpc-name]-allow-rdp* (incoming rdp)
+  4. *[my-vpc-name]-allow-ssh* (incomming ssh traffic)
+* There are also two another rules which we cannot modify, the last two ones:
+  1. *[my-vpc-name]-deny-all-ingress*
+  2. *[my-vpc-name]-allow-all-egress*
 
 
 
