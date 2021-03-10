@@ -52,6 +52,8 @@ https://cloud.google.com/load-balancing/docs/load-balancing-overview
 
 ### VPC Creation
 
+* When a *Project* is created there is a default *VPC* created.
+
 #### Subnet Creation Mode
 * **Automatic**: it will create one subnet in each region, _using always the same CIDRs_
   * If a new Region or Zone is included a new *Subnet* it will be included automatically
@@ -62,7 +64,7 @@ https://cloud.google.com/load-balancing/docs/load-balancing-overview
 
 
 
-#### Firewall Rules
+#### Firewall Rules in Automatic Subnet Creation VPC
 
 * Also we start a new *VPC* with some 4 default  Firewall rules, which we can modify.
   1. *[my-vpc-name]-allow-all-icmp* (so we can allow ping/traceroute and so)
@@ -80,7 +82,39 @@ Global dynamic routing allows all subnetworks regardless of region to be adverti
 There are: **Regional** (default) and **Global**, With **Global routing** you just need a single VPN with cloud router to dynamically learn routes to and from all GCP regions on a network. 
 
 
+#### Creating a Custom VPC
+* In this case we will need to crete the *Subnets* we will want to use, assign the *Name* , *Region* and *IP address range*, when creating the *Subnets* we are also asked for:
+  * *Private Google Access*: If we want to connect to Google Services even if we are not able to connect to internet(meaning without assigning public IP)
+  * *Flow Logs*: Will give a lot of information about the traffic happening in the *Subnet*
+* When creating a Custom *VPC* we are not having any *Firewall* rule created for us
 
+
+
+### Firewall rules
+
+* When creating a *Firewall* Rule, better to have in the name the following suffix `-fwr` so we can identify it very easily
+
+#### Selecting Targets
+
+* **All instances in the network**: So if we want to use the rule in all the instances in the whole VPC.
+* **Specified target tags**: We just write the *Tag* we want to filter, and it will just apply to that concrete *Tag*. **Remember** *Tag* != *Label*
+* **Specified service account**: We can have them from even different projects. For using this, we just need to:
+  1. Create a new *Role* including for example the *Permissions* of the existing *Roles* `Logs Writer` and `Monitoring Metric Writer`
+  2. In *IAM* use that role to crete a new *Service Account*
+  3. We use this *Service Account* when creating an *Instance Template* for example
+
+#### Source Filters
+* We can have 2 levels of filters, where we can use again: *Tags*, *CIDRs* and *Service Account*
+
+#### Protocol and Ports
+* We can select the Ports we want, or protocol names as: *ssh*, *icmp* etc... 
+
+
+
+
+
+Roles:
+`Logs Writer` and `Monitoring Metric Writer`
 
 
 
