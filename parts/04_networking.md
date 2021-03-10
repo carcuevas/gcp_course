@@ -41,6 +41,15 @@ https://cloud.google.com/load-balancing/docs/load-balancing-overview
 
 ### VPC  Routing Among Resources
 
+* The *VPC* itself is Global 
+* The *Subnets* on inside the *VPC* are **not** Golbal but Regional, but all of the *Subnets* can reach all others(without VPN)
+* *Routes* inside the *VPC* are also Global, and define the next hop for traffic based on destination IP
+  *  Routes are global aind apply by Instance-level *Tags* not by *Subnet* (I think this is different from AWS), we can configure the *Tags* in certain *Resouorces*
+  *  No route to the internet Gateway means no such data can flow
+ * *Firewall* Rules, are also define at *VPC* level so they are Global, and filter data flow that would otherwise route.
+   * All *Firewall* Rules are apply Instance-level *Tags* or Service Account 
+   * Default *Firewall* Rules block all inboud traffic and allow all the the oubound data. Of course that we can change
+
 
 
  
