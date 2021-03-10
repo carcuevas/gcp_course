@@ -106,7 +106,8 @@ There are: **Regional** (default) and **Global**, With **Global routing** you ju
   3. We use this *Service Account* when creating an *Instance Template* for example
 
 #### Source Filters
-* We can have 2 levels of filters, where we can use again: *Tags*, *CIDRs* and *Service Account*
+* **For ingress**: We can have **2 levels of filters where we can use again: *Tags*, *CIDRs* and *Service Account***
+* **For egress**: We can have **1 filter and it's just *CIDRs***
 
 #### Protocol and Ports
 * We can select the Ports we want, or protocol names as: *ssh*, *icmp* etc... 
