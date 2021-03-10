@@ -1,4 +1,4 @@
-![Screenshot_20210310_183951](https://user-images.githubusercontent.com/9727843/110672585-14f95f80-81d0-11eb-96ee-c0b74bdf513c.png)
+
 ## Routing
 
 * This is useful :D https://www.webopedia.com/reference/osi-layers/
