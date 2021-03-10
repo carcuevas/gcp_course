@@ -61,7 +61,6 @@ https://cloud.google.com/load-balancing/docs/load-balancing-overview
 * When creating a new *VPC* if we use **Automatic** `Subnet  Creation Mode` it will create one subnet in each region, _using always the same CIDRs_
 
 
- 
 
 #### Firewall Rules
 
@@ -75,6 +74,10 @@ https://cloud.google.com/load-balancing/docs/load-balancing-overview
   2. *[my-vpc-name]-allow-all-egress*
 
 
+#### Dynamic routing mode
+
+Global dynamic routing allows all subnetworks regardless of region to be advertised to your on-premise router and region when using cloud router. 
+There are: **Regional** (default) and **Global**, With **Global routing** you just need a single VPN with cloud router to dynamically learn routes to and from all GCP regions on a network. 
 
 
 
