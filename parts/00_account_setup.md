@@ -15,3 +15,8 @@ To create in the for the whole Billing Account, it is just needed to go to the B
 
 ## Create user which has the ability of creating Projects and can assign Project to a budget.
 
+
+
+Check this for setting up the Admin accounts and so
+https://cloud.google.com/resource-manager/docs/organization-setup
+https://console.cloud.google.com/getting-started/enterprise?organizationId=646329885933
