@@ -41,7 +41,15 @@ We can allow from the VM if we want to have access to some or all  of the `Cloud
 #### Automation
 
 * **Startup scripts**: This will run, when starting the machine for first time **and** on a **reboot**
-* **Metadata**: We can set variables, basically if in a *Startup script* we have written `variable1` and we set the value in *Metadata* `variable1` to `test1` it will substitue in the script `variable1` to `test1` before executing it.
+* **Metadata**: We can set variables, basically if in a *Startup script* we have written `variable1` and we set the value in *Metadata* `variable1` to `test1` it will substitue in the script `variable1` to `test1` before executing it. Inside a script we can substitute it like this:
+
+```
+#!/bin/bash
+# variable1 will be substituted by test1
+VARIABLE=$(curl http://metadata.google.internal/computeMetadata/v1/instance/attributes/variable1 -H "Metadata-Flavor: Google")
+```
+
+
 
 #### Availability Policy
 
